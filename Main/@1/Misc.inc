@@ -10,6 +10,12 @@ MeasureName6=MeasureUpTime
 Autoscale=1
 MEterStyle=Text
 
+[MeterPing]
+Meter=String
+MeasureName=MeasurePing
+Text=google.com: %1ms
+MEterStyle=Text
+
 [Misc]
 Meter=String
 MeasureName=RecycleBinFiles
@@ -26,3 +32,11 @@ MEterStyle=Text
 [Dot6]
 Meter=String
 MeterStyle=Dots | FirstAlign:#Align#
+
+[Battery]
+Meter=String
+MeasureName=MeasureBatteryStatus
+MeasureName2=MeasureBatteryPercent
+MeasureName3=MeasureBatteryLifetime
+Text=Status: %1, %2%, %3 remaining
+MEterStyle=Text

@@ -193,6 +193,10 @@ Measure=NetOut
 Interface=Best
 MinValue=0
 AverageSize=5
+[MeasurePing]
+Measure=Plugin
+Plugin=PingPlugin
+DestAddress=www.google.fr
 
 ;========================================
 ;Names
@@ -205,7 +209,7 @@ Parameter=wmic path win32_VideoController get name
 State=Hide
 OutputType=ANSI
 RegExpSubstitute=1
-Substitute="Name.*#CRLF#":"","#CRLF#.*":"","  ":"","Radeon":"AMD Radeon","NVIDIA GeForce":"NVIDIA GeForce"
+Substitute="Name.*#CRLF#":"","Intel.*#CRLF#":"","#CRLF#.*":"","  ":"","Radeon":"AMD Radeon","NVIDIA GeForce":"NVIDIA GeForce"
 UpdateDivider=-1
 [MeasureCPUName]
 Measure=Registry
@@ -229,3 +233,20 @@ UpdateDivider=-1
 ; ================================================
 ; Drives
 ; ================================================
+
+; ================================================
+; Power
+; ================================================
+[MeasureBatteryStatus]
+Measure=Plugin
+Plugin=PowerPlugin
+PowerState=ACLine
+Substitute="0":"Unplugged","1":"Plugged"
+[MeasureBatteryPercent]
+Measure=Plugin
+Plugin=PowerPlugin
+PowerState=Percent
+[MeasureBatteryLifetime]
+Measure=Plugin
+Plugin=PowerPlugin
+PowerState=Lifetime
