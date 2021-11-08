@@ -10,7 +10,7 @@ UpdateDivider=-1
 
 [MeasureTime]
 Measure=Time
-Format=%H%M%S
+Format=%H:%M:%S
 [MeasureDate]
 Measure=Time
 Format=%a, %#b %#d
