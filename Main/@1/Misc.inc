@@ -7,6 +7,7 @@ MeasureName3=InternetType
 MeasureName4=InternetDownloadSpeed
 MeasureName5=InternetUploadSpeed
 MeasureName6=MeasureUpTime
+MeasureName7=MeasurePing
 Autoscale=1
 MEterStyle=Text
 
